@@ -1,6 +1,8 @@
 #include "main.h"
 
 #include <driver/gpio.h>
+#include <esp_timer.h>
+#include <rom/gpio.h>
 
 #if CONFIG_IDF_TARGET_ESP32
 #define LEDMX_PIN_A GPIO_NUM_13

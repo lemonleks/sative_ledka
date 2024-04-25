@@ -1,5 +1,6 @@
 #include <errno.h>
 #include <esp_http_server.h>
+#include <esp_timer.h>
 #include <inttypes.h>
 #include <stdarg.h>
 
@@ -143,7 +144,7 @@ static esp_err_t get_handler(httpd_req_t *req) {
   char buf[1024], *p = buf;
   PRINT(buf, p, "Hello, world!\n");
   PRINT(buf, p, "Time: %lld\n", esp_timer_get_time());
-  PRINT(buf, p, "Free heap: %d\n", esp_get_free_heap_size());
+  PRINT(buf, p, "Free heap: %" PRIu32 "\n", esp_get_free_heap_size());
 
   httpd_resp_send(req, buf, p - buf);
   return ESP_OK;

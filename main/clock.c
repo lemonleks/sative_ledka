@@ -16,7 +16,7 @@ void ledka_clock_draw(time_t now) {
     p += sprintf(p, "%d:%02d", remaining / 3600 % 10, remaining / 60 % 60);
     draw_text(font, buf, 0, 0, TEXT_SPACING_TABULAR);
   } else {
-    p += sprintf(p, "%02d\n%02d", now / 3600 % 24, now / 60 % 60);
+    p += sprintf(p, "%02d\n%02d", (int)(now / 3600 % 24), (int)(now / 60 % 60));
     draw_text(font, buf, (32 * PANELS_X - 2 * (font->width + 1)) / 2, 0,
               TEXT_SPACING_MONO);
   }

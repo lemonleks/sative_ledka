@@ -1,4 +1,5 @@
 #include <esp_log.h>
+#include <esp_timer.h>
 #include <sys/socket.h>
 
 #include "main.h"
@@ -119,7 +120,7 @@ static void send_poll_reply(void) {
 
   char buf[239] = {0};
 #define SET_U16(POS, VAL)                                                      \
-  buf[POS] = (VAL)&0xff;                                                       \
+  buf[POS] = (VAL) & 0xff;                                                     \
   buf[POS + 1] = (VAL) >> 8;
 // TODO: static assert that sizeof(STR) - 1 <= MAX_LEN
 #define SET_STR(POS, STR, MAX_LEN) memcpy(buf + POS, STR, sizeof(STR) - 1)
