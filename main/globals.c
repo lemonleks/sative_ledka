@@ -8,10 +8,10 @@ static const uint8_t rev = 0x80;
 const uint8_t default_topo[PANELS_X * PANELS_Y] = {
 // clang-format off
   #if LEDKA_VERSION == 1
-    rev|5, rev|4, rev|3, rev|0,
-    rev|7, rev|6, rev|2, rev|1,
+    rev|1, rev|2, rev|3, rev|4,rev|5, rev|6, rev|7, rev|8,rev|9,
+    
   #elif LEDKA_VERSION == 2
-    rev|0,
+   rev|8, rev|7, rev|6, rev|5, rev|4,rev|3, rev|2, rev|1, rev|0
   #endif
     // clang-format on
 };

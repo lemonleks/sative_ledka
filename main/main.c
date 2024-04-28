@@ -35,6 +35,7 @@ void app_main() {
                                   .name = "ledmx_refresh"};
   ESP_ERROR_CHECK(esp_timer_create(&args, &timer));
 
+/*
   esp_timer_handle_t clock_timer =
 #if LEDKA_VERSION == 1
       ledka_main_clock1_init()
@@ -42,7 +43,7 @@ void app_main() {
       ledka_main_clock2_init()
 #endif
       ;
-
+*/
   ledmx_mktopo(default_topo, NULL);
 
   memset(data1, 0, sizeof data1);
@@ -81,10 +82,10 @@ void app_main() {
       }
       data1_active = !data1_active;
     }
-
+/*
     if (text_timeout)
       text_timeout--;
-
+*/
     if (config.bars_enabled) {
       bars_step();
       bars_draw();

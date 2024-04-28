@@ -16,7 +16,7 @@
 #define PANELS_X 4
 #define PANELS_Y 2
 #elif LEDKA_VERSION == 2
-#define PANELS_X 1
+#define PANELS_X 9
 #define PANELS_Y 1
 #endif
 

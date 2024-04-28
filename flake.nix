@@ -27,7 +27,6 @@
             hardeningDisable = [ "all" ];
             buildInputs = [
               esp-dev.packages.${system}.esp-idf-full
-              pkgs.esptool-ck
               pkgs.ccache
             ];
 

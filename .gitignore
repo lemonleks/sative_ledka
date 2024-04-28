@@ -4,3 +4,8 @@
 /credentials.h
 /main/fonts.gen.c
 /sdkconfig.old
+.DS_Store
+fonts
+.vscode
+sdkconfig
+result

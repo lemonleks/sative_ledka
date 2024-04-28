@@ -32,6 +32,15 @@ sudo chown $USER /dev/ttyACM0
 idf.py flash
 ```
 
+## MacOS
+```sh
+ls /dev/cu.*
+```
+
+```sh
+curl -X POST '192.168.31.126/text?text=ABCD&timeout=1000000&font=BMSPA&y=1'
+```
+
 # Pinout
 
 ## P10
